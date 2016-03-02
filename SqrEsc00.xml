@@ -1,5 +1,10 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_right" id="163" x="106" y="16">
+  <block type="movement_leftmotor" id="173" inline="true" x="94" y="65">
+    <value name="MOVLEFT">
+      <block type="math_number" id="174">
+        <field name="NUM">85</field>
+      </block>
+    </value>
     <next>
       <block type="robot_delay" id="152" inline="true">
         <value name="DELAY">
@@ -28,7 +33,7 @@
                     </value>
                     <value name="B">
                       <block type="math_number" id="62">
-                        <field name="NUM">85</field>
+                        <field name="NUM">75</field>
                       </block>
                     </value>
                   </block>
@@ -57,7 +62,7 @@
                     </value>
                     <value name="B">
                       <block type="math_number" id="119">
-                        <field name="NUM">85</field>
+                        <field name="NUM">75</field>
                       </block>
                     </value>
                   </block>
