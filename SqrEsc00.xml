@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="7" inline="false" x="93" y="69">
+  <block type="controls_whileUntil" id="7" inline="false" x="40" y="-119">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="30">
@@ -8,7 +8,7 @@
     </value>
     <statement name="DO">
       <block type="controls_if" id="37" inline="false">
-        <mutation elseif="2" else="1"></mutation>
+        <mutation elseif="1" else="1"></mutation>
         <value name="IF0">
           <block type="logic_compare" id="55" inline="true">
             <field name="OP">LT</field>
@@ -28,35 +28,6 @@
           <block type="movement_right" id="204"></block>
         </statement>
         <value name="IF1">
-          <block type="logic_compare" id="117" inline="true">
-            <field name="OP">GT</field>
-            <value name="A">
-              <block type="sensor_object" id="118">
-                <field name="OBJECT">LEFTSIDE</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number" id="119">
-                <field name="NUM">75</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <statement name="DO1">
-          <block type="movement_setmotors" id="120" inline="true">
-            <value name="BOTHMOVLEFT">
-              <block type="math_number" id="121">
-                <field name="NUM">0</field>
-              </block>
-            </value>
-            <value name="BOTHMOVRIGHT">
-              <block type="math_number" id="122">
-                <field name="NUM">100</field>
-              </block>
-            </value>
-          </block>
-        </statement>
-        <value name="IF2">
           <block type="logic_compare" id="181" inline="true">
             <field name="OP">LT</field>
             <value name="A">
@@ -71,7 +42,7 @@
             </value>
           </block>
         </value>
-        <statement name="DO2">
+        <statement name="DO1">
           <block type="movement_setmotors" id="184" inline="true">
             <value name="BOTHMOVLEFT">
               <block type="math_number" id="185">
@@ -113,5 +84,8 @@
     <next>
       <block type="movement_stop" id="111"></block>
     </next>
+  </block>
+  <block type="math_number" id="119" x="731" y="468">
+    <field name="NUM">75</field>
   </block>
 </xml>
