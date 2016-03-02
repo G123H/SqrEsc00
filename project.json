@@ -1,0 +1,10 @@
+{
+    "name": "SqrEsc00",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "project_type": "application",
+    "executable_type": "scratch",
+    "executable": "SqrEsc00.xml",
+    "author": "G123H",
+    "minimum_firmware_version": 42
+}
