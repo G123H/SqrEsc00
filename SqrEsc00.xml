@@ -8,7 +8,7 @@
     </value>
     <statement name="DO">
       <block type="controls_if" id="37" inline="false">
-        <mutation elseif="1" else="1"></mutation>
+        <mutation elseif="2" else="1"></mutation>
         <value name="IF0">
           <block type="logic_compare" id="55" inline="true">
             <field name="OP">LT</field>
@@ -28,6 +28,38 @@
           <block type="movement_right" id="204"></block>
         </statement>
         <value name="IF1">
+          <block type="logic_compare" id="217" inline="true">
+            <field name="OP">GT</field>
+            <value name="A">
+              <block type="sensor_object" id="218">
+                <field name="OBJECT">LEFTSIDE</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="219">
+                <field name="NUM">75</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="movement_setmotors" id="223" inline="true">
+            <value name="BOTHMOVLEFT">
+              <block type="math_number" id="224">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="BOTHMOVRIGHT">
+              <block type="math_number" id="225">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+            <next>
+              <block type="movement_left" id="235"></block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF2">
           <block type="logic_compare" id="181" inline="true">
             <field name="OP">LT</field>
             <value name="A">
@@ -42,7 +74,7 @@
             </value>
           </block>
         </value>
-        <statement name="DO1">
+        <statement name="DO2">
           <block type="movement_setmotors" id="184" inline="true">
             <value name="BOTHMOVLEFT">
               <block type="math_number" id="185">
@@ -84,8 +116,5 @@
     <next>
       <block type="movement_stop" id="111"></block>
     </next>
-  </block>
-  <block type="math_number" id="119" x="731" y="468">
-    <field name="NUM">75</field>
   </block>
 </xml>
