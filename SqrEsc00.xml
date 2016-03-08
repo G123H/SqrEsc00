@@ -35,7 +35,7 @@
                             </value>
                             <statement name="DO">
                               <block type="controls_if" id="6" inline="false">
-                                <mutation elseif="1" else="1"></mutation>
+                                <mutation elseif="2" else="1"></mutation>
                                 <value name="IF0">
                                   <block type="logic_compare" id="7" inline="true">
                                     <field name="OP">LT</field>
@@ -61,6 +61,24 @@
                                   </block>
                                 </statement>
                                 <value name="IF1">
+                                  <block type="logic_compare" id="99" inline="true">
+                                    <field name="OP">LT</field>
+                                    <value name="A">
+                                      <block type="sensor_object" id="100">
+                                        <field name="OBJECT">LEFTSIDE</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="101">
+                                        <field name="NUM">75</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO1">
+                                  <block type="movement_left" id="121"></block>
+                                </statement>
+                                <value name="IF2">
                                   <block type="logic_compare" id="11" inline="true">
                                     <field name="OP">GT</field>
                                     <value name="A">
@@ -75,7 +93,7 @@
                                     </value>
                                   </block>
                                 </value>
-                                <statement name="DO1">
+                                <statement name="DO2">
                                   <block type="movement_leftmotor" id="43" inline="true">
                                     <value name="MOVLEFT">
                                       <block type="math_number" id="44">
